@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://scottnoble.github.io/sitemap.xml 
