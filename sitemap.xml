@@ -1,19 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://scottnoble.github.io/blog/2013/10/07/my-first-post/</loc>
-        <lastmod>2013-10-07T21:09:25-06:00</lastmod>
+        <loc>http://ScottNoble.github.io/blog/2013/10/07/my-first-post/</loc>
+        <lastmod>2013-10-07T21:24:39-06:00</lastmod>
     </url>
     <url>
-        <loc>http://scottnoble.github.io/blog/archives/</loc>
-        <lastmod>2013-10-07T21:09:25-06:00</lastmod>
+        <loc>http://ScottNoble.github.io/blog/2013/10/09/blog-post-number-2/</loc>
+        <lastmod>2013-10-14T13:17:31-06:00</lastmod>
     </url>
     <url>
-        <loc>http://scottnoble.github.io/</loc>
-        <lastmod>2013-10-07T21:09:25-06:00</lastmod>
+        <loc>http://ScottNoble.github.io/blog/archives/</loc>
+        <lastmod>2013-10-14T13:17:31-06:00</lastmod>
     </url>
     <url>
-        <loc>http://scottnoble.github.io/robots.txt</loc>
+        <loc>http://ScottNoble.github.io/</loc>
+        <lastmod>2013-10-14T13:17:31-06:00</lastmod>
+    </url>
+    <url>
+        <loc>http://ScottNoble.github.io/robots.txt</loc>
         <lastmod>2013-10-07T20:24:50-06:00</lastmod>
     </url>
 </urlset>
