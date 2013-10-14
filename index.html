@@ -109,6 +109,12 @@ cd ~/workspace/octopress Then I created a new post &hellip;">
 </pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post["Blog post #2"]</span></code></pre></td></tr></table></div></figure>
 
 
+<p>I opened the blog post in RubyMine with iterm by giving the command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mine .</span></code></pre></td></tr></table></div></figure>
+
+
 <p>I then ran the rake commands to generate and preview the post:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -122,7 +128,17 @@ cd ~/workspace/octopress Then I created a new post &hellip;">
 <p>This allowed me to load and preview my post on my local server with the address
 &ldquo;<a href="http:\localhost:4000">http:\localhost:4000</a>&rdquo;</p>
 
-<p>The next step was to</p>
+<p>The next step was to rerun rake generate (I don&rsquo;t know if this step is necessary)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, I ran rake deploy to load this post to my github repository.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
 </div>
   
   
