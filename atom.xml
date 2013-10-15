@@ -4,7 +4,7 @@
   <title><![CDATA[Immersion Course in Ruby and Rails]]></title>
   <link href="http://ScottNoble.github.io/atom.xml" rel="self"/>
   <link href="http://ScottNoble.github.io/"/>
-  <updated>2013-10-14T13:43:01-06:00</updated>
+  <updated>2013-10-14T19:37:33-06:00</updated>
   <id>http://ScottNoble.github.io/</id>
   <author>
     <name><![CDATA[Scott Noble]]></name>
@@ -12,6 +12,194 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Intro to Git]]></title>
+    <link href="http://ScottNoble.github.io/blog/2013/10/14/intro-to-git/"/>
+    <updated>2013-10-14T17:51:00-06:00</updated>
+    <id>http://ScottNoble.github.io/blog/2013/10/14/intro-to-git</id>
+    <content type="html"><![CDATA[<p>In class we are learning to use Git and Github.
+Git is a version control system or as a newbie to coding might think of it
+Git is a &ldquo;super fancy track changes&rdquo;</p>
+
+<p>Git has three &ldquo;areas&rdquo; that operate locally</p>
+
+<p>The first is the working directory.
+This is where you make changes to your file.</p>
+
+<p>To create a working directory and initialize git for this directory you type
+the following into the terminal:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir practice
+</span><span class='line'>cd practice
+</span><span class='line'>git init</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you can create files within this directory</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>echo "Hello World" &gt; README</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if you check the git status of your working directory you will see something like this</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># On branch master
+</span><span class='line'>#
+</span><span class='line'># Initial commit
+</span><span class='line'>#
+</span><span class='line'># Untracked files:
+</span><span class='line'>#   (use "git add &lt;file&gt;..." to include in what will be committed)
+</span><span class='line'>#
+</span><span class='line'># README
+</span><span class='line'>nothing added to commit but untracked files present (use "git add" to track)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now you can move your Untracked file(s) to &ldquo;the staging area&rdquo; by running:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add README</span></code></pre></td></tr></table></div></figure>
+
+
+<p>staging a file is like taking a snapshot of that file
+Now, if you check git status you will see something like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># On branch master
+</span><span class='line'>#
+</span><span class='line'># Initial commit
+</span><span class='line'>#
+</span><span class='line'># Changes to be committed:
+</span><span class='line'>#   (use "git rm --cached &lt;file&gt;..." to unstage)
+</span><span class='line'>#
+</span><span class='line'># new file:   README
+</span><span class='line'>#</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now the file is tracked and ready to be committed.
+You can either commit this or you can wait to commit multiple file changes
+A hint would be that you might want to wait and commit multiple file changes if the changes are logically linked.</p>
+
+<p>The next step is to commit the change to the git directory.
+This is always accompanied by a comment explaining the changes that have been made.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git commit -m "added README file with 'Hello World'"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>will produce something like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[master (root-commit) b914adf] added READ file with "Hello World"
+</span><span class='line'> 1 file changed, 1 insertion(+)
+</span><span class='line'> create mode 100644 README</span></code></pre></td></tr></table></div></figure>
+
+
+<p>helpful tip is that if you enter git commit without a comment (because you are just so eager!)
+you exit from VIM by pushing esc and typing :q! to return to your command line where you can commit with a comment</p>
+
+<p>finally you can view the change you made by typing</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git show</span></code></pre></td></tr></table></div></figure>
+
+
+<p>which will return:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>commit b914adf636caa68126e86597ac9702735ce1d5fd
+</span><span class='line'>Author: Scott Noble &lt;YYYYY@xxx.com&gt;
+</span><span class='line'>Date:   Mon Oct 14 18:38:33 2013 -0600
+</span><span class='line'>
+</span><span class='line'>    added READ file with "Hello World"
+</span><span class='line'>
+</span><span class='line'>diff --git a/README b/README
+</span><span class='line'>new file mode 100644
+</span><span class='line'>index 0000000..557db03
+</span><span class='line'>--- /dev/null
+</span><span class='line'>+++ b/README
+</span><span class='line'>@@ -0,0 +1 @@
+</span><span class='line'>+Hello World</span></code></pre></td></tr></table></div></figure>
+
+
+<p>once you have made more changes you can look at a list of all the changes by entering</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git log</span></code></pre></td></tr></table></div></figure>
+
+
+<p>this will return:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>commit 4fc086902c6a20de6abfe6f56c630862c56e149c
+</span><span class='line'>Author: Scott Noble &lt;xxx@yyy.com&gt;
+</span><span class='line'>Date:   Mon Oct 14 18:50:21 2013 -0600
+</span><span class='line'>
+</span><span class='line'>    added a line of text to README
+</span><span class='line'>
+</span><span class='line'>commit b914adf636caa68126e86597ac9702735ce1d5fd
+</span><span class='line'>Author: Scott Noble &lt;xxx@yyy.com&gt;
+</span><span class='line'>Date:   Mon Oct 14 18:38:33 2013 -0600
+</span><span class='line'>
+</span><span class='line'>    added READ file with "Hello World"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>if you want to look at a specific change in the log you can copy the long code
+called a &ldquo;SHA-1 hash&rdquo; and enter</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git show 4fc086902c6a20de6abfe6f56c630862c56e149c</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This will return the specific details of that individual commit.
+If no SHA-1 hash is given with git show it will default to the details of your last commit.</p>
+
+<p>With this knowledge you can track the different versions of your project locally as you make changes</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Blog post #2]]></title>
