@@ -9,9 +9,9 @@
   <meta name="author" content="Scott Noble">
 
   
-  <meta name="description" content="In class we are learning to use Git and Github.
-Git is a version control system or as a newbie to coding might think of it
-Git is a &ldquo;super &hellip;">
+  <meta name="description" content="In class we use iTerm2.
+To learn and get familiar with the command line we completed all the exercises in
+http://cli.learncodethehardway.org/book/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +67,91 @@ Git is a &ldquo;super &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/11/13/making-an-alias-in-iterm/">Making an Alias in iTerm</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-11-13T15:00:00-07:00" pubdate data-updated="true">Nov 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In class we use iTerm2.
+To learn and get familiar with the command line we completed all the exercises in
+<a href="http://cli.learncodethehardway.org/book/">http://cli.learncodethehardway.org/book/</a> and in class we do most of our work from the command line.</p>
+
+<p>I finally decided that I no longer wanted to go through the hassle
+of &ldquo;cd&#8217;ing&rdquo; into my different class directories so I made some aliases so that I can go directly into the
+directories that I want.</p>
+
+<p>To do this I typed:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ vi ~/.bash_profile</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This brings you to the vim view of your bash profile
+which might look something like:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>
+</span><span class='line'>~
+</span><span class='line'>~
+</span><span class='line'>~
+</span><span class='line'>~
+</span><span class='line'>"~/.bash_profile" 8L, 232C
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Typing i goes into the VIM INSERT mode.
+I then created my aliases by typing
+alias name=&lsquo;cd /path&rsquo;
+Next, to exit the VIM INSERT I pressed ESC and then typed :wq to save and quit.
+My aliases looked like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>alias hw='cd ~/workspace/davinci_coders_homework_q4_2013/'
+</span><span class='line'>alias btt='cd ~/workspace/building_the_toolbelt_q4_2013/'
+</span><span class='line'>alias ws='cd ~/workspace'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now, when the instructor tells us to go to our homework directory, the building the toolbelt directory or the workspace directory
+I just type hw, btt, or ws into the command line and I am there no matter what directory I was in to start.</p>
+
+<p>To activate the aliases you need to exit your current session and reload the iterm.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -594,6 +679,10 @@ request( &#39;DELETE&#39;, &quot;alleles/#{allele[&#39;id&#39;]}&quot; )</code><
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/13/making-an-alias-in-iterm/">Making an Alias in iTerm</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/10/14/intro-to-git/">Intro to Git</a>
